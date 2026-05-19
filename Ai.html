@@ -110,8 +110,8 @@ header{
   position:relative;
   overflow:hidden;
 
-  padding-top:140px;
-  padding-bottom:120px;
+  padding-top:110px;
+  padding-bottom:90px;
 }
 
 .hero::before{
@@ -203,6 +203,7 @@ header{
   font-weight:600;
 
   transition:0.35s ease;
+  letter-spacing:0.3px;
 }
 
 .primary-btn{
@@ -307,9 +308,9 @@ header{
 }
 
 .phone-number{
-  font-size:28px;
-  font-weight:800;
-  margin-top:14px;
+  display:inline-block;
+  color:white;
+  text-decoration:none;
 }
 
 /* ===== SECTION TITLES ===== */
@@ -513,25 +514,372 @@ footer{
   }
 
 }
+
+
+
+/* ===== BOOKING FORM ===== */
+
+.booking-box{
+  max-width:1250px;
+  margin:auto;
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:28px;
+  padding:55px;
+  backdrop-filter:blur(18px);
+  box-shadow:0 25px 70px rgba(0,0,0,0.45);
+}
+
+.booking-box h2{
+  font-size:42px;
+  margin-bottom:15px;
+  text-align:center;
+  background:linear-gradient(to right,#ffffff,#c4b5fd);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.booking-box p{
+  text-align:center;
+  color:#b6bdd0;
+  margin-bottom:35px;
+}
+
+.booking-form{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea{
+  width:100%;
+  padding:16px 18px;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,0.10);
+  background:rgba(255,255,255,0.04);
+  color:white;
+  font-family:'Inter',sans-serif;
+  outline:none;
+}
+
+.booking-form input::placeholder,
+.booking-form textarea::placeholder{
+  color:#9ca3af;
+}
+
+.booking-form textarea{
+  grid-column:1 / -1;
+  min-height:120px;
+  resize:none;
+}
+
+.booking-form button{
+  grid-column:1 / -1;
+  border:none;
+  cursor:pointer;
+}
+
+
+
+/* ===== PREMIUM INPUTS ===== */
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea{
+
+  width:100%;
+
+  padding:16px 18px;
+
+  border-radius:14px;
+
+  border:1px solid rgba(255,255,255,0.10);
+
+  background:rgba(255,255,255,0.04);
+
+  color:white;
+
+  font-family:'Inter',sans-serif;
+
+  outline:none;
+
+  transition:0.35s ease;
+
+  backdrop-filter:blur(10px);
+}
+
+/* PLACEHOLDER */
+
+.booking-form input::placeholder,
+.booking-form textarea::placeholder{
+  color:#9ca3af;
+}
+
+/* HOVER EFFECT */
+
+.booking-form input:hover,
+.booking-form select:hover,
+.booking-form textarea:hover{
+
+  border-color:
+  rgba(168,85,247,0.35);
+
+  background:
+  rgba(255,255,255,0.06);
+
+  box-shadow:
+  0 10px 30px rgba(124,58,237,0.12);
+}
+
+/* FOCUS EFFECT */
+
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus{
+
+  border-color:
+  rgba(168,85,247,0.55);
+
+  background:
+  rgba(255,255,255,0.07);
+
+  box-shadow:
+  0 0 0 4px rgba(124,58,237,0.12),
+  0 12px 35px rgba(124,58,237,0.18);
+}
+
+/* SELECT DROPDOWN */
+
+.booking-form select{
+
+  appearance:none;
+
+  -webkit-appearance:none;
+
+  -moz-appearance:none;
+
+  cursor:pointer;
+}
+
+/* OPTION COLORS */
+
+.booking-form option{
+  background:#0f172a;
+  color:white;
+}
+
+/* TEXTAREA */
+
+.booking-form textarea{
+  resize:none;
+  min-height:120px;
+}
+.booking-box:hover{
+
+  transform:translateY(-8px);
+
+  border-color:rgba(168,85,247,0.35);
+
+  box-shadow:
+  0 25px 70px rgba(124,58,237,0.20);
+}
+
+
+
+
+/* ===== VIDEO SHOWCASE ===== */
+
+.ai-preview{
+  position:relative;
+}
+
+.video-showcase{
+
+  position:relative;
+
+  max-width:1000px;
+
+  margin:auto;
+
+  border-radius:28px;
+
+  overflow:hidden;
+
+  background:rgba(255,255,255,0.04);
+
+  border:1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter:blur(18px);
+
+  box-shadow:
+  0 30px 80px rgba(0,0,0,0.45);
+
+  transition:0.35s ease;
+}
+
+.video-showcase:hover{
+
+  transform:translateY(-8px);
+
+  border-color:rgba(168,85,247,0.35);
+
+  box-shadow:
+  0 35px 90px rgba(124,58,237,0.22);
+}
+
+.video-showcase video{
+  width:100%;
+  display:block;
+}
+
+/* OPTIONAL GLOW */
+
+.video-showcase::before{
+
+  content:'';
+
+  position:absolute;
+
+  inset:0;
+
+  background:
+  linear-gradient(
+    135deg,
+    rgba(124,58,237,0.08),
+    rgba(37,99,235,0.08)
+  );
+
+  pointer-events:none;
+}
+
+
+input[type="hidden"]{
+  display:none !important;
+  visibility:hidden !important;
+  opacity:0 !important;
+  width:0 !important;
+  height:0 !important;
+  padding:0 !important;
+  margin:0 !important;
+  border:none !important;
+  position:absolute !important;
+}
+input[type="hidden"]{
+  display:none !important;
+}
+
+
+
+
+
+/* ===== FINAL MOBILE FIXES ===== */
+
+@media(max-width:768px){
+
+  section{
+    padding:70px 0;
+  }
+
+  .container{
+    width:92%;
+  }
+
+  .hero{
+    padding-top:90px;
+    padding-bottom:70px;
+  }
+
+  .hero-left h1{
+    font-size:42px;
+    line-height:1.15;
+    letter-spacing:-1px;
+  }
+
+  .hero-description,
+  .hero-left p{
+    font-size:17px;
+    line-height:1.7;
+  }
+
+  .hero-buttons{
+    flex-direction:column;
+    width:100%;
+  }
+
+  .hero-buttons .btn{
+    width:100%;
+    text-align:center;
+  }
+
+  .hero-card{
+    padding:28px;
+  }
+
+  .hero-card h2{
+    font-size:36px;
+  }
+
+  .phone-number{
+    font-size:24px;
+    word-break:break-word;
+  }
+
+  .section-title{
+    font-size:34px;
+  }
+
+  .section-subtitle{
+    font-size:16px;
+  }
+
+  .feature-card,
+  .industry-card,
+  .step{
+    padding:28px;
+  }
+
+  .booking-box{
+    padding:30px 22px;
+  }
+
+  .booking-box h2{
+    font-size:32px;
+  }
+
+  .video-showcase{
+    border-radius:20px;
+  }
+
+}
+
+@media(max-width:980px){
+  .hero-grid{
+    grid-template-columns:1fr;
+  }
+}
+
   </style>
 </head>
 
 <body>
-
+<div id="top"></div>
   <!-- HEADER -->
 
   <header>
     <div class="container navbar">
 
-      <div class="logo">
-        iMak AI
-      </div>
+      <a href="#top" class="logo">
+  iMak AI
+</a>
 
       <div class="nav-links">
         <a href="#features">Features</a>
         <a href="#industries">Industries</a>
         <a href="#how">How It Works</a>
-        <a href="#contact" class="btn primary-btn">Book Demo</a>
+        <a href="#booking" class="btn primary-btn">Book Demo</a>
+        
       </div>
 
     </div>
@@ -543,7 +891,7 @@ footer{
 
     <div class="container hero-grid">
 
-      <div>
+      <div class="hero-left">
 
         <h1>
           24/7 AI Receptionist For Local Businesses
@@ -555,13 +903,13 @@ footer{
         </p>
 
         <div class="hero-buttons">
-          <a href="#contact" class="btn primary-btn">
+          <a href="#booking" class="btn primary-btn">
             Book Free Demo
           </a>
 
-          <a href="#demo" class="btn secondary-btn">
-            Try Live Demo
-          </a>
+          <a href="#demo-video" class="btn secondary-btn">
+  Try Live Demo
+</a>
         </div>
 
       </div>
@@ -587,9 +935,9 @@ footer{
             Call now and test the AI receptionist live.
           </p>
 
-          <div class="phone-number">
-            +1 (519) 215-6643
-          </div>
+          <a href="tel:+15192156643" class="phone-number">
+  +1 (519) 215-6643
+</a>
 
         </div>
 
@@ -598,6 +946,35 @@ footer{
     </div>
 
   </section>
+
+ <section id="demo-video" class="ai-preview">
+
+  <div class="container">
+
+    <div class="preview-header">
+
+      <h2 class="section-title">
+        AI Receptionist In Action
+      </h2>
+
+      <p class="section-subtitle">
+        Watch how the AI handles customer calls, booking,
+        cancellations, and scheduling automatically.
+      </p>
+
+    </div>
+
+    <div class="video-showcase">
+
+      <video autoplay muted loop playsinline poster="thumbnail.jpg">
+        <source src="demo.mp4" type="video/mp4">
+      </video>
+
+    </div>
+
+  </div>
+
+</section>
 
   <!-- FEATURES -->
 
@@ -657,6 +1034,18 @@ footer{
             Send automatic confirmations and reminders to customers.
           </p>
         </div>
+        <div class="feature-card">
+          <h3>SMS or Text Confirmations</h3>
+          <p>
+            Send automatic confirmations and reminders to customers.
+          </p>
+        </div>
+        <div class="feature-card">
+  <h3>Calendar Integration</h3>
+  <p>
+    Seamlessly sync appointments with Google Calendar in real-time.
+  </p>
+</div>
 
       </div>
 
@@ -765,8 +1154,15 @@ footer{
         </div>
 
         <div class="industry-card">
-          <h3>Chiropractors</h3>
-        </div>
+  <h3>Law Firms</h3>
+</div>
+<div class="industry-card">
+  <h3>Real Estate Agencies</h3>
+</div>
+
+<div class="industry-card">
+  <h3>Veterinary Clinics</h3>
+</div>
 
       </div>
 
@@ -790,7 +1186,7 @@ footer{
           Book a free demo and see how AI can automate your appointment booking.
         </p>
 
-        <a href="#" class="btn primary-btn">
+        <a href="#booking" class="btn primary-btn">
           Book Free Demo
         </a>
 
@@ -799,6 +1195,56 @@ footer{
     </div>
 
   </section>
+
+ <section id="booking">
+  <div class="container">
+
+    <div class="booking-box">
+
+      <h2>Book Your Free AI Receptionist Demo</h2>
+
+      <p>
+        Fill out the form and we’ll contact you to show a live demo.
+      </p>
+
+      <form
+  class="booking-form"
+  action="https://formsubmit.co/imakrepairsorangeville@gmail.com"
+  method="POST"
+>
+
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Email Address" required>
+  <input type="tel" name="phone" placeholder="Phone Number" required>
+  <input type="text" name="business" placeholder="Business Name">
+
+  <select name="business_type" required>
+    <option value="">Select Business Type</option>
+    <option>Dental Clinic</option>
+    <option>Salon / Spa</option>
+    <option>Physiotherapy</option>
+    <option>HVAC / Home Service</option>
+    <option>Auto Repair</option>
+    <option>Law Firm</option>
+    <option>Real Estate</option>
+    <option>Veterinary Clinic</option>
+    <option>Other</option>
+  </select>
+
+  <textarea name="message" placeholder="Tell us what you need"></textarea>
+
+  <button type="submit" class="btn primary-btn">
+    Request Free Demo
+  </button>
+
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_subject" value="New AI Receptionist Demo Request">
+
+</form>
+    </div>
+
+  </div>
+</section>
 
   <!-- FOOTER -->
 
