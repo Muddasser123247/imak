@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>24/7 AI Receptionist For Local Businesses | iMak AI</title>
+
+  <meta name="description" content="AI receptionist that answers calls, books appointments, handles cancellations, and integrates with Google Calendar automatically." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+
+  /* ===== GLOBAL ===== */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'Inter',sans-serif;
+
+  background:
+  radial-gradient(circle at top left,
+  rgba(88,28,135,0.35) 0%,
+  rgba(15,23,42,0.95) 35%,
+  #020617 100%);
+
+  color:white;
+  line-height:1.6;
+}
+
+.container{
+  width:90%;
+  max-width:1200px;
+  margin:auto;
+}
+
+a{
+  text-decoration:none;
+}
+
+section{
+  padding:100px 0;
+}
+
+/* ===== HEADER ===== */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:999;
+
+  background:rgba(2,6,23,0.7);
+
+  backdrop-filter:blur(14px);
+
+  border-bottom:1px solid rgba(255,255,255,0.06);
+}
+
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 0;
+}
+
+.logo{
+  font-size:30px;
+  font-weight:800;
+
+  background:linear-gradient(
+    to right,
+    #ffffff,
+    #c4b5fd,
+    #93c5fd
+  );
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.nav-links{
+  display:flex;
+  gap:30px;
+  align-items:center;
+}
+
+.nav-links a{
+  color:#d1d5db;
+  font-size:15px;
+  transition:0.3s ease;
+}
+
+.nav-links a:hover{
+  color:white;
+}
+
+/* ===== HERO ===== */
+
+.hero{
+  position:relative;
+  overflow:hidden;
+
+  padding-top:140px;
+  padding-bottom:120px;
+}
+
+.hero::before{
+  content:'';
+
+  position:absolute;
+
+  width:700px;
+  height:700px;
+
+  background:
+  radial-gradient(circle,
+  rgba(168,85,247,0.18),
+  transparent 70%);
+
+  top:-250px;
+  right:-150px;
+
+  z-index:0;
+}
+
+.hero-grid{
+  position:relative;
+  z-index:2;
+
+  display:grid;
+  grid-template-columns:1fr 1fr;
+
+  gap:70px;
+
+  align-items:center;
+}
+
+.hero-left{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.hero-left h1{
+
+  font-size:58px;
+
+  line-height:1.08;
+
+  margin-bottom:26px;
+
+  font-weight:800;
+
+  letter-spacing:-2px;
+
+  background:linear-gradient(
+    to right,
+    #ffffff,
+    #c4b5fd,
+    #93c5fd
+  );
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.hero-description{
+
+  font-size:20px;
+
+  color:#b6bdd0;
+
+  margin-bottom:40px;
+
+  max-width:620px;
+
+  line-height:1.7;
+}
+
+/* ===== BUTTONS ===== */
+
+.hero-buttons{
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  padding:16px 28px;
+
+  border-radius:14px;
+
+  font-weight:600;
+
+  transition:0.35s ease;
+}
+
+.primary-btn{
+
+  background:linear-gradient(
+    135deg,
+    #7c3aed,
+    #2563eb
+  );
+
+  color:white;
+
+  box-shadow:
+  0 12px 35px rgba(124,58,237,0.35);
+}
+
+.primary-btn:hover{
+
+  transform:translateY(-3px);
+
+  box-shadow:
+  0 18px 45px rgba(124,58,237,0.45);
+}
+
+.secondary-btn{
+
+  background:rgba(255,255,255,0.03);
+
+  border:1px solid rgba(255,255,255,0.12);
+
+  color:white;
+}
+
+.secondary-btn:hover{
+  background:rgba(255,255,255,0.08);
+}
+
+/* ===== GLASS EFFECT ===== */
+
+.hero-card,
+.feature-card,
+.industry-card,
+.step,
+.cta{
+
+  background:rgba(255,255,255,0.04);
+
+  border:1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter:blur(18px);
+
+  border-radius:24px;
+
+  box-shadow:
+  0 0 0 1px rgba(255,255,255,0.03),
+  0 20px 60px rgba(0,0,0,0.45);
+
+  transition:0.35s ease;
+}
+
+.hero-card:hover,
+.feature-card:hover,
+.industry-card:hover,
+.step:hover,
+.cta:hover{
+
+  transform:translateY(-8px);
+
+  border-color:rgba(168,85,247,0.35);
+
+  box-shadow:
+  0 25px 70px rgba(124,58,237,0.20);
+}
+
+/* ===== HERO CARD ===== */
+
+.hero-card{
+  padding:40px;
+}
+
+.hero-card h2{
+  font-size:42px;
+  line-height:1.2;
+  margin-bottom:20px;
+}
+
+.hero-card p{
+  color:#b6bdd0;
+}
+
+.call-box{
+
+  background:rgba(255,255,255,0.03);
+
+  border:1px solid rgba(255,255,255,0.08);
+
+  border-radius:18px;
+
+  padding:24px;
+
+  margin-top:30px;
+}
+
+.phone-number{
+  font-size:28px;
+  font-weight:800;
+  margin-top:14px;
+}
+
+/* ===== SECTION TITLES ===== */
+
+.section-title{
+
+  text-align:center;
+
+  font-size:48px;
+
+  margin-bottom:18px;
+
+  background:linear-gradient(
+    to right,
+    #ffffff,
+    #c4b5fd
+  );
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.section-subtitle{
+
+  text-align:center;
+
+  color:#b6bdd0;
+
+  max-width:700px;
+
+  margin:auto;
+
+  margin-bottom:60px;
+
+  font-size:18px;
+}
+
+/* ===== FEATURES ===== */
+
+.features-grid,
+.industries-grid,
+.steps{
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(260px,1fr));
+
+  gap:28px;
+}
+
+.feature-card,
+.industry-card,
+.step{
+  padding:38px;
+}
+
+.feature-card h3,
+.industry-card h3,
+.step h3{
+  margin-bottom:14px;
+  font-size:24px;
+}
+
+.feature-card p,
+.step p{
+  color:#b6bdd0;
+}
+
+/* ===== HOW IT WORKS ===== */
+
+#how{
+  position:relative;
+  overflow:hidden;
+}
+
+#how::before{
+
+  content:'';
+
+  position:absolute;
+
+  width:500px;
+  height:500px;
+
+  background:
+  radial-gradient(circle,
+  rgba(124,58,237,0.14),
+  transparent 70%);
+
+  top:-200px;
+  left:-100px;
+
+  z-index:0;
+}
+
+#how .container{
+  position:relative;
+  z-index:2;
+}
+
+.step{
+  text-align:center;
+}
+
+.step-number{
+
+  width:72px;
+  height:72px;
+
+  background:
+  linear-gradient(
+    135deg,
+    #ffffff,
+    #d4d4d8
+  );
+
+  color:#000;
+
+  border-radius:50%;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  margin:auto;
+
+  font-size:28px;
+  font-weight:800;
+
+  margin-bottom:24px;
+
+  box-shadow:
+  0 10px 30px rgba(255,255,255,0.12);
+}
+
+/* ===== CTA ===== */
+
+.cta{
+  text-align:center;
+  padding:80px 40px;
+}
+
+.cta h2{
+
+  font-size:52px;
+
+  margin-bottom:20px;
+
+  background:linear-gradient(
+    to right,
+    #ffffff,
+    #c4b5fd
+  );
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.cta p{
+  color:#b6bdd0;
+  margin-bottom:35px;
+  font-size:18px;
+}
+
+/* ===== FOOTER ===== */
+
+footer{
+  padding:40px 0;
+  text-align:center;
+  color:#94a3b8;
+  border-top:1px solid rgba(255,255,255,0.06);
+}
+
+/* ===== MOBILE ===== */
+
+@media(max-width:980px){
+
+  .hero-grid{
+    grid-template-columns:1fr;
+  }
+
+  .hero-left h1{
+    font-size:46px;
+  }
+
+  .hero-description{
+    font-size:18px;
+  }
+
+  .section-title{
+    font-size:38px;
+  }
+
+  .cta h2{
+    font-size:40px;
+  }
+
+  .nav-links{
+    display:none;
+  }
+
+}
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+    <div class="container navbar">
+
+      <div class="logo">
+        iMak AI
+      </div>
+
+      <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#industries">Industries</a>
+        <a href="#how">How It Works</a>
+        <a href="#contact" class="btn primary-btn">Book Demo</a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="container hero-grid">
+
+      <div>
+
+        <h1>
+          24/7 AI Receptionist For Local Businesses
+        </h1>
+
+        <p>
+          Answer calls, book appointments, check availability,
+          handle cancellations, and sync directly with Google Calendar automatically.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#contact" class="btn primary-btn">
+            Book Free Demo
+          </a>
+
+          <a href="#demo" class="btn secondary-btn">
+            Try Live Demo
+          </a>
+        </div>
+
+      </div>
+
+      <div class="hero-card">
+
+        <h2>
+          Never Miss Another Customer Call
+        </h2>
+
+        <p style="margin-top:20px;color:#cbd5e1;">
+          Our AI receptionist works 24/7 to answer calls,
+          schedule appointments, and transfer urgent calls to your team.
+        </p>
+
+        <div class="call-box" id="demo">
+
+          <h3>
+            Live AI Demo
+          </h3>
+
+          <p>
+            Call now and test the AI receptionist live.
+          </p>
+
+          <div class="phone-number">
+            +1 (519) 215-6643
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FEATURES -->
+
+  <section id="features">
+
+    <div class="container">
+
+      <h2 class="section-title">
+        Powerful AI Receptionist Features
+      </h2>
+
+      <p class="section-subtitle">
+        Automate customer calls, appointment booking,
+        confirmations, cancellations, and more.
+      </p>
+
+      <div class="features-grid">
+
+        <div class="feature-card">
+          <h3>Appointment Booking</h3>
+          <p>
+            Automatically schedule appointments directly into your calendar.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Availability Checks</h3>
+          <p>
+            AI checks your calendar in real-time before confirming bookings.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Rescheduling</h3>
+          <p>
+            Customers can easily change appointments without staff involvement.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Cancellation Handling</h3>
+          <p>
+            Automatically process cancellations and free up time slots.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Human Transfer</h3>
+          <p>
+            Urgent calls can instantly transfer to your staff or mobile phone.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Email Confirmations</h3>
+          <p>
+            Send automatic confirmations and reminders to customers.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- HOW IT WORKS -->
+
+  <section id="how">
+
+    <div class="container">
+
+      <h2 class="section-title">
+        How It Works
+      </h2>
+
+      <p class="section-subtitle">
+        Simple setup. Powerful automation.
+      </p>
+
+      <div class="steps">
+
+        <div class="step">
+
+          <div class="step-number">
+            1
+          </div>
+
+          <h3>Customer Calls</h3>
+
+          <p style="margin-top:15px;color:#cbd5e1;">
+            Your customer calls your business phone number.
+          </p>
+
+        </div>
+
+        <div class="step">
+
+          <div class="step-number">
+            2
+          </div>
+
+          <h3>AI Handles Conversation</h3>
+
+          <p style="margin-top:15px;color:#cbd5e1;">
+            The AI answers questions and books appointments automatically.
+          </p>
+
+        </div>
+
+        <div class="step">
+
+          <div class="step-number">
+            3
+          </div>
+
+          <h3>Booking Confirmed</h3>
+
+          <p style="margin-top:15px;color:#cbd5e1;">
+            Appointment gets added directly to your Google Calendar.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- INDUSTRIES -->
+
+  <section id="industries">
+
+    <div class="container">
+
+      <h2 class="section-title">
+        Perfect For
+      </h2>
+
+      <p class="section-subtitle">
+        Built for service businesses that rely on appointments and customer calls.
+      </p>
+
+      <div class="industries-grid">
+
+        <div class="industry-card">
+          <h3>Dental Clinics</h3>
+        </div>
+
+        <div class="industry-card">
+          <h3>Salons & Spas</h3>
+        </div>
+
+        <div class="industry-card">
+          <h3>Physiotherapy Clinics</h3>
+        </div>
+
+        <div class="industry-card">
+          <h3>HVAC Companies</h3>
+        </div>
+
+        <div class="industry-card">
+          <h3>Auto Repair Shops</h3>
+        </div>
+
+        <div class="industry-card">
+          <h3>Chiropractors</h3>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+
+  <section id="contact">
+
+    <div class="container">
+
+      <div class="cta">
+
+        <h2>
+          Ready To Stop Missing Customer Calls?
+        </h2>
+
+        <p>
+          Book a free demo and see how AI can automate your appointment booking.
+        </p>
+
+        <a href="#" class="btn primary-btn">
+          Book Free Demo
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="container">
+      © 2026 iMak AI — AI Receptionist Solutions
+    </div>
+
+  </footer>
+
+</body>
+</html>
