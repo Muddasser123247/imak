@@ -927,6 +927,374 @@ input[type="hidden"]{
 .faq-item p{
   color:#cbd5e1;
 }
+
+    
+.demo-feature-layout{
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  gap:22px;
+
+  max-width:1200px;
+  margin:40px auto 0;
+}
+
+/* LIVE DEMO */
+
+.live-call-demo{
+  background:#fff;
+  border-radius:24px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.08);
+  box-shadow:0 20px 55px rgba(0,0,0,.28);
+  height:700px;
+  display:flex;
+  flex-direction:column;
+   width:100%;
+  min-width:0;
+}
+
+.demo-header{
+  background:linear-gradient(135deg,#0f172a,#020617);
+  padding:14px 18px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.demo-title{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  color:#fff;
+  font-weight:700;
+  font-size:18px;
+}
+
+.phone-icon{
+  width:38px;
+  height:38px;
+  border-radius:12px;
+  background:linear-gradient(135deg,#9333ea,#7c3aed);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:17px;
+}
+
+.demo-status{
+  background:#052e2b;
+  color:#10b981;
+  padding:8px 16px;
+  border-radius:999px;
+  font-size:13px;
+  font-weight:700;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.live-dot{
+  width:8px;
+  height:8px;
+  background:#10b981;
+  border-radius:50%;
+}
+
+.demo-body{
+  padding:22px;
+  flex:1;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+}
+
+/* INCOMING */
+
+.incoming-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  margin-bottom:18px;
+  padding-bottom:16px;
+  border-bottom:1px dashed #d1d5db;
+}
+
+.incoming-row h3{
+  color:#111827;
+  font-size:26px;
+  margin-bottom:4px;
+}
+
+.incoming-row p{
+  color:#64748b;
+  font-size:14px;
+}
+
+.time{
+  color:#64748b;
+  font-size:15px;
+}
+
+/* CHAT */
+
+.chat-wrapper{
+  flex:1;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.chat-row{
+  display:grid;
+  grid-template-columns:110px auto;
+  gap:14px;
+  align-items:start;
+  justify-content:start;
+  flex-shrink:0;
+
+  opacity:0;
+  transform:translateY(8px);
+  animation:fadeUp .3s forwards;
+}
+
+.chat-label{
+  font-size:11px;
+  font-weight:800;
+  color:#7c3aed;
+  text-transform:uppercase;
+  margin-top:12px;
+}
+
+.chat-bubble{
+  display:inline-block;
+  width:auto;
+  max-width:650px;
+
+  padding:12px 16px;
+
+  border-radius:14px;
+
+  font-size:14px;
+  line-height:1.5;
+
+  border:1px solid #e5e7eb;
+
+  background:#fff;
+  color:#111827;
+
+  word-break:break-word;
+}
+
+.chat-row.ai .chat-bubble{
+  background:#f6efff;
+}
+
+/* BOOKING */
+
+.booking-success{
+  margin-top:18px;
+  padding:16px 18px;
+  border:1px solid #e5e7eb;
+  border-radius:16px;
+  display:none;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
+}
+
+.booking-icon{
+  width:46px;
+  height:46px;
+  border-radius:14px;
+  background:#f3e8ff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:20px;
+}
+
+.booking-success strong{
+  color:#111827;
+  display:block;
+  margin-bottom:4px;
+  font-size:15px;
+}
+
+.booking-success p{
+  color:#64748b;
+  font-size:13px;
+}
+
+.booking-success a{
+  color:#7c3aed;
+  font-weight:700;
+  white-space:nowrap;
+  font-size:14px;
+}
+
+/* FEATURES */
+
+.features-side{
+  display:grid;
+  grid-template-columns:repeat(2, 260px);
+  gap:18px;
+}
+
+.features-side .feature-card{
+  padding:18px;
+  border-radius:18px;
+  min-height:165px;
+}
+
+.feature-icon{
+  width:46px;
+  height:46px;
+  border-radius:14px;
+  background:rgba(147,51,234,.18);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:20px;
+  margin-bottom:30px;
+}
+
+.features-side h3{
+  font-size:20px;
+  margin-bottom:10px;
+}
+
+.features-side p{
+  color:#cbd5e1;
+  font-size:14px;
+  line-height:1.6;
+}
+
+/* ANIMATION */
+
+@keyframes fadeUp{
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* TABLET */
+
+@media(max-width:1100px){
+
+  .demo-feature-layout{
+    grid-template-columns:1fr;
+    padding:0;
+  }
+
+  .features-side{
+    grid-template-columns:1fr 1fr;
+  }
+
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+  .demo-feature-layout{
+    flex-direction:column;
+    align-items:center;
+    gap:18px;
+    padding:0 14px;
+  }
+
+  .features-side{
+    grid-template-columns:1fr;
+    width:100%;
+  }
+
+  .live-call-demo{
+    width:100%;
+    height:auto;
+    border-radius:18px;
+  }
+
+  .chat-row{
+    grid-template-columns:1fr;
+    gap:8px;
+  }
+
+  .chat-label{
+    margin-top:0;
+    margin-bottom:2px;
+  }
+
+  .chat-bubble{
+    max-width:100%;
+    font-size:14px;
+    padding:10px 12px;
+  }
+
+  .incoming-row{
+    flex-direction:column;
+    gap:8px;
+  }
+
+  .incoming-row h3{
+    font-size:20px;
+  }
+
+  .features-side .feature-card{
+    min-height:auto;
+  }
+
+  .ai-heading h2{
+    font-size:42px;
+    line-height:1.1;
+  }
+
+  .ai-heading p{
+    font-size:15px;
+    line-height:1.6;
+  }
+
+}
+
+
+
+
+
+
+
+.ai-heading{
+  text-align:center;
+  margin-bottom:42px;
+}
+
+.ai-heading h2{
+
+  font-size:64px;
+  line-height:1.05;
+  font-weight:800;
+
+  margin-bottom:16px;
+
+  letter-spacing:-2px;
+
+  color:#ddd6fe;
+
+}
+
+.ai-heading p{
+
+  font-size:22px;
+  color:#cbd5e1;
+
+  max-width:760px;
+
+  margin:auto;
+
+  line-height:1.7;
+}
+
   </style>
 </head>
 
@@ -1014,111 +1382,107 @@ input[type="hidden"]{
 
   </section>
 
- <section id="demo-video" class="ai-preview">
+ 
+<div class="ai-heading">
+  <h2>AI Receptionist In Action</h2>
 
-  <div class="container">
-
-    <div class="preview-header">
-
-      <h2 class="section-title">
-        AI Receptionist In Action
-      </h2>
-
-      <p class="section-subtitle">
-        Watch how the AI handles customer calls, booking,
-        cancellations, and scheduling automatically.
-      </p>
-
-    </div>
-
-    <div class="video-showcase">
-
-      <video autoplay muted loop playsinline poster="thumbnail.jpg">
-        <source src="demo.mp4" type="video/mp4">
-      </video>
-
-    </div>
-
-  </div>
-
-</section>
-
-  <!-- FEATURES -->
-
-  <section id="features">
-
-    <div class="container">
-
-      <h2 class="section-title">
-        Powerful AI Receptionist Features
-      </h2>
-
-      <p class="section-subtitle">
-        Automate customer calls, appointment booking,
-        confirmations, cancellations, and more.
-      </p>
-
-      <div class="features-grid">
-
-        <div class="feature-card">
-          <h3>Appointment Booking</h3>
-          <p>
-            Automatically schedule appointments directly into your calendar.
-          </p>
-        </div>
-
-        <div class="feature-card">
-          <h3>Availability Checks</h3>
-          <p>
-            AI checks your calendar in real-time before confirming bookings.
-          </p>
-        </div>
-
-        <div class="feature-card">
-          <h3>Rescheduling</h3>
-          <p>
-            Customers can easily change appointments without staff involvement.
-          </p>
-        </div>
-
-        <div class="feature-card">
-          <h3>Cancellation Handling</h3>
-          <p>
-            Automatically process cancellations and free up time slots.
-          </p>
-        </div>
-
-        <div class="feature-card">
-          <h3>Human Transfer</h3>
-          <p>
-            Urgent calls can instantly transfer to your staff or mobile phone.
-          </p>
-        </div>
-
-        <div class="feature-card">
-          <h3>Email Confirmations</h3>
-          <p>
-            Send automatic confirmations and reminders to customers.
-          </p>
-        </div>
-        <div class="feature-card">
-          <h3>SMS or Text Confirmations</h3>
-          <p>
-            Send automatic confirmations and reminders to customers.
-          </p>
-        </div>
-        <div class="feature-card">
-  <h3>Calendar Integration</h3>
   <p>
-    Seamlessly sync appointments with Google Calendar in real-time.
+    See how the AI answers calls, books appointments,
+    and keeps your business running 24/7.
   </p>
 </div>
+<div class="demo-feature-layout">
+
+  <!-- LIVE DEMO -->
+  <div class="live-call-demo">
+
+    <div class="demo-header">
+      <div class="demo-title">
+        <div class="phone-icon">📞</div>
+        <span>AI Receptionist Call</span>
+      </div>
+
+      <div class="demo-status">
+        <span class="live-dot"></span>
+        Completed
+      </div>
+    </div>
+
+    <div class="demo-body">
+
+      <div class="incoming-row">
+        <div>
+          <h3>Incoming call</h3>
+          <p>Caller: Mike • Mobile</p>
+        </div>
+
+        <span class="time">2:14 PM</span>
+      </div>
+
+      <div class="chat-wrapper" id="demoSteps"></div>
+
+      <div class="booking-success" id="demoResult">
+
+        <div class="booking-icon">📅</div>
+
+        <div>
+          <strong>Appointment Booked Successfully</strong>
+          <p>Mike · iPhone Screen Repair · Today at 3:30 PM</p>
+        </div>
+
+        <a href="#">View Details</a>
 
       </div>
 
     </div>
 
-  </section>
+  </div>
+
+  <!-- FEATURES -->
+  <div class="features-side">
+
+    <div class="feature-card">
+      <div class="feature-icon">📅</div>
+      <h3>Appointment Booking</h3>
+      <p>Automatically schedule appointments directly into your calendar.</p>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-icon">⏰</div>
+      <h3>Availability Checks</h3>
+      <p>AI checks your calendar in real-time before confirming bookings.</p>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-icon">💬</div>
+      <h3>SMS Confirmations</h3>
+      <p>Send automatic confirmations and reminders to customers.</p>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-icon">📆</div>
+      <h3>Calendar Integration</h3>
+      <p>Seamlessly sync appointments with Google Calendar in real-time.</p>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-icon">🔄</div>
+      <h3>Rescheduling</h3>
+      <p>Customers can easily change appointments without staff involvement.</p>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-icon">📲</div>
+      <h3>Human Transfer</h3>
+      <p>Urgent calls can instantly transfer to your staff or mobile phone.</p>
+    </div>
+
+  </div>
+
+</div>
+
+</section>
+
 
   <!-- HOW IT WORKS -->
 
@@ -1371,6 +1735,70 @@ input[type="hidden"]{
 </p>
 
   </footer>
+ 
+<script>
+const demoSteps = document.getElementById("demoSteps");
+const demoResult = document.getElementById("demoResult");
 
+const steps = [
+  ["CALLER","Hi, my iPhone screen is cracked. Can I bring it in today?","caller"],
+
+  ["AI RECEPTIONIST","Hi Mike! Yes, we can definitely help with that. I have a few openings this afternoon. Would you prefer a morning or afternoon appointment?","ai"],
+
+  ["CALLER","Afternoon works better for me.","caller"],
+
+  ["AI RECEPTIONIST","Great! I have an opening at 3:30 PM. Does that work for you?","ai"],
+
+  ["CALLER","Yes, 3:30 PM is perfect.","caller"],
+
+  ["AI RECEPTIONIST","Perfect! You're all set for 3:30 PM today. I'll send you a confirmation text with all the details. See you then!","ai"]
+];
+
+let current = 0;
+
+function addMessage(step){
+
+  const row = document.createElement("div");
+  row.className = `chat-row ${step[2]}`;
+
+  row.innerHTML = `
+    <div class="chat-label">${step[0]}</div>
+    <div class="chat-bubble">${step[1]}</div>
+  `;
+
+  demoSteps.appendChild(row);
+}
+
+function runDemo(){
+
+  demoSteps.innerHTML = "";
+  demoResult.style.display = "none";
+
+  current = 0;
+
+  const interval = setInterval(() => {
+
+    addMessage(steps[current]);
+
+    current++;
+
+    if(current >= steps.length){
+
+      clearInterval(interval);
+
+      setTimeout(() => {
+        demoResult.style.display = "flex";
+      },700);
+
+      setTimeout(() => {
+        runDemo();
+      },5000);
+    }
+
+  },1400);
+}
+
+runDemo();
+</script>
 </body>
 </html>
