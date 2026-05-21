@@ -1294,7 +1294,33 @@ input[type="hidden"]{
 
   line-height:1.7;
 }
+/* FAQ MOBILE FIX */
 
+@media(max-width:700px){
+
+  .faq-grid{
+    grid-template-columns:1fr !important;
+    gap:18px;
+  }
+
+  .faq-card{
+    width:100%;
+    padding:24px 22px;
+    border-radius:20px;
+  }
+
+  .faq-card h3{
+    font-size:18px;
+    line-height:1.5;
+    margin-bottom:14px;
+  }
+
+  .faq-card p{
+    font-size:15px;
+    line-height:1.7;
+  }
+
+}
   </style>
 </head>
 
