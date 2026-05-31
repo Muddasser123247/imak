@@ -1709,14 +1709,18 @@ input[type="hidden"]{
       </p>
 
       <form
-  id="contactForm"
+  id="demoForm"
+  class="booking-form"
   action="https://formspree.io/f/mjgzgevp"
   method="POST"
-  class="contact-form">
+>
 
   <input type="text" name="name" placeholder="Your Name" required>
+
   <input type="email" name="email" placeholder="Email Address" required>
+
   <input type="tel" name="phone" placeholder="Phone Number" required>
+
   <input type="text" name="business" placeholder="Business Name">
 
   <select name="business_type" required>
@@ -1732,15 +1736,23 @@ input[type="hidden"]{
     <option>Other</option>
   </select>
 
-  <textarea name="message" placeholder="Tell us what you need"></textarea>
+  <textarea
+    name="message"
+    placeholder="Tell us what you need"></textarea>
 
   <button type="submit" class="btn primary-btn">
     Request Free Demo
   </button>
 
-  
-
 </form>
+
+<div id="successMessage" style="display:none;">
+  <h3>Thank You!</h3>
+  <p>
+    Your demo request has been received.
+    Redirecting to the homepage...
+  </p>
+</div>
     </div>
 
   </div>
@@ -1825,19 +1837,19 @@ function runDemo(){
 
 runDemo();
 
-  const form = document.getElementById('contactForm');
+  const form = document.getElementById("demoForm");
 
-form.addEventListener('submit', async function(e) {
+form.addEventListener("submit", async function(e) {
 
   e.preventDefault();
 
   const data = new FormData(form);
 
   const response = await fetch(form.action, {
-    method: 'POST',
+    method: "POST",
     body: data,
     headers: {
-      'Accept': 'application/json'
+      Accept: "application/json"
     }
   });
 
@@ -1845,16 +1857,18 @@ form.addEventListener('submit', async function(e) {
 
     form.reset();
 
-    alert(
-      'Thank you! Your message has been sent successfully. We will contact you soon.'
-    );
+    form.style.display = "none";
 
-    window.location.href = 'index.html';
+    document.getElementById("successMessage").style.display = "block";
+
+    setTimeout(() => {
+      window.location.href = "index.html";
+    }, 3000);
 
   } else {
 
     alert(
-      'Sorry, there was a problem sending your message. Please try again.'
+      "Something went wrong. Please try again."
     );
 
   }
