@@ -1321,6 +1321,25 @@ input[type="hidden"]{
   }
 
 }
+
+    .success-box{
+  text-align:center;
+  padding:40px 30px;
+  border-radius:16px;
+  background:#f8fafc;
+  border:1px solid #e5e7eb;
+  margin-top:20px;
+}
+
+.success-box h3{
+  font-size:28px;
+  margin-bottom:12px;
+}
+
+.success-box p{
+  color:#64748b;
+  line-height:1.6;
+}
   </style>
 </head>
 
@@ -1746,11 +1765,13 @@ input[type="hidden"]{
 
 </form>
 
-<div id="successMessage" style="display:none;">
-  <h3>Thank You!</h3>
+<div id="successMessage" class="success-box" style="display:none;">
+  <h3>🎉 Demo Request Received!</h3>
   <p>
-    Your demo request has been received.
-    Redirecting to the homepage...
+    Thank you for contacting us. Our team will review your request and reach out shortly.
+  </p>
+  <p>
+    Redirecting you to the homepage...
   </p>
 </div>
     </div>
