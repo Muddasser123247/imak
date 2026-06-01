@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>AI Agent Services — iMak AI Solutions</title>
+  <meta name="description" content="Custom AI agents for local businesses including AI receptionists, missed call recovery, appointment reminders, review requests, expense tracking and business growth automation.">
+  <link rel="canonical" href="https://imakrepairs.com/ai-agents.html" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <div class="top-bar">
+    AI Automation & Agent Development for Local Businesses
+  </div>
+
+  <header class="main-header">
+    <div class="container header-inner">
+      <div class="logo">iMak AI Solutions</div>
+
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="accessories.html">Accessories</a>
+        <a href="ai-agents.html" class="active"> AI Solutions</a>
+        <a href="services.html">In-Store Services</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero hero-small">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <h1>AI Agents That Work For Your Business 24/7</h1>
+        <p>
+          Explore custom AI agents that help local businesses automate calls,
+          reminders, reviews, expenses, lead follow-up and daily business tasks.
+        </p>
+
+        <div class="hero-actions">
+          <a href="contact.html" class="btn primary-btn">Request Demo</a>
+          <a href="#agents" class="btn secondary-btn">View Agents</a>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <img src="images/ai-agents-hero.png"
+             alt="AI agents automation dashboard for local businesses"
+             class="hero-photo">
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="agents">
+    <div class="container">
+      <h2 class="section-title">AI Agent Library</h2>
+
+      <p>
+        Click any agent to view details, benefits and how it can help your business.
+      </p>
+
+      <div class="agent-grid">
+
+        <div class="agent-card" onclick="openAgent('receptionist')">
+          <img src="images/Ai Re.png" alt="AI Receptionist Agent">
+          <h3>AI Receptionist Agent</h3>
+          <span>Learn More</span>
+        </div>
+
+        <div class="agent-card" onclick="openAgent('missed')">
+          <img src="images/miss call.png" alt="Missed Call Recovery Agent">
+          <h3>Missed Call Recovery Agent</h3>
+          <span>Learn More</span>
+        </div>
+
+        <div class="agent-card" onclick="openAgent('appointment')">
+          <img src="images/appt.png" alt="Appointment Reminder Agent">
+          <h3>Appointment Reminder Agent</h3>
+          <span>Learn More</span>
+        </div>
+
+        <div class="agent-card" onclick="openAgent('review')">
+          <img src="images/google.png" alt="Google Review Growth Agent">
+          <h3>Google Review Growth Agent</h3>
+          <span>Learn More</span>
+        </div>
+
+        <div class="agent-card" onclick="openAgent('expense')">
+          <img src="images/expens.png" alt="Receipt and Expense Agent">
+          <h3>Receipt & Expense Agent</h3>
+          <span>Learn More</span>
+        </div>
+
+        <div class="agent-card" onclick="openAgent('job')">
+          <img src="images/job.png" alt="Job Application Agent">
+          <h3>Job Application Agent</h3>
+          <span>Learn More</span>
+        </div>
+
+        <div class="agent-card" onclick="openAgent('social')">
+  <img src="images/social.png" alt="Social Media Growth Agent">
+  <h3>Social Media Growth Agent</h3>
+  <span>Learn More</span>
+</div>
+
+        <div class="agent-card" onclick="openAgent('growth')">
+          <img src="images/growth.png" alt="Local Business Growth Agent">
+          <h3>Local Business Growth Agent</h3>
+          <span>Learn More</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- HOW IT WORKS -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">How It Works</h2>
+
+      <div class="grid services-grid" style="margin-top:1.2rem">
+
+        <div class="card service-card">
+          <h3>1. Choose an AI Agent</h3>
+          <p>
+            Select the type of AI agent your business needs, such as call answering,
+            review requests, reminders, lead follow-up or reporting.
+          </p>
+        </div>
+
+        <div class="card service-card">
+          <h3>2. We Customize It</h3>
+          <p>
+            We adjust the workflow, messages, integrations and automation rules
+            based on your business process.
+          </p>
+        </div>
+
+        <div class="card service-card">
+          <h3>3. You Start Automating</h3>
+          <p>
+            Once connected, your AI agent starts helping with repetitive tasks,
+            customer communication and daily business operations.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Custom-Built For Your Workflow</h2>
+
+      <p>
+        Every business is different. We customize each AI agent based on your
+        business process, tools, customer communication style and automation goals.
+      </p>
+
+      <p style="margin-top:0.6rem">
+        Agents can connect with forms, email, SMS, Google Calendar, Google Sheets,
+        CRMs and other supported platforms.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Need a Custom AI Agent?</h2>
+      <p>
+        Tell us what task you want to automate. We’ll recommend the best AI agent setup.
+      </p>
+
+      <div style="margin-top:1rem">
+        <a href="contact.html" class="btn primary-btn">Request an AI Agent Demo</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="agent-modal" id="agentModal">
+    <div class="agent-modal-content">
+      <button class="modal-close" onclick="closeAgent()">×</button>
+
+      <img id="modalImage" src="" alt="AI Agent Preview">
+
+      <h2 id="modalTitle"></h2>
+      <p id="modalDescription"></p>
+
+      <h4>Key Benefits</h4>
+      <ul id="modalBenefits"></ul>
+
+      <a href="contact.html" class="btn primary-btn modal-btn">Request Demo</a>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+
+      <div class="footer-links">
+        <h4>Transparency & Disclaimer</h4>
+        <p>
+          iMak AI Solutions provides independent AI automation and software setup services.
+          We are not affiliated with, sponsored by, or authorized by any third-party
+          platform, software provider or brand.
+        </p>
+        <a href="index.html">Home</a>
+        <a href="services.html">Repair Services</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer-map">
+        <h4>Find Us</h4>
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps?q=28+Mill+Street,+Orangeville,+ON&output=embed" loading="lazy"></iframe>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <span>© 2025 iMak AI Solutions</span>
+          <a href="privacy.html">Privacy Policy</a>
+<a href="terms.html">Terms of Service</a>
+<p style="margin-top:10px;font-size:13px;color:#64748b;">
+  Calls may be monitored or recorded for quality and training purposes.
+</p>
+        <span>AI Automation & Agent Development</span>
+      </div>
+    </div>
+  
+  </footer>
+
+  <script>
+    const agents = {
+      receptionist: {
+        title: "AI Receptionist Agent",
+        image: "images/ai-receptionist-agent.png",
+        description: "Answers calls, books appointments, qualifies leads and supports customers 24/7.",
+        benefits: [
+          "Answer calls after hours",
+          "Book appointments automatically",
+          "Capture customer details",
+          "Send confirmations"
+        ]
+      },
+      missed: {
+        title: "Missed Call Recovery Agent",
+        image: "images/missed-call-agent.png",
+        description: "Turns missed calls into leads with instant SMS follow-up and owner notifications.",
+        benefits: [
+          "Instant missed call reply",
+          "Lead capture by SMS",
+          "Owner notification",
+          "Reduce lost customers"
+        ]
+      },
+      appointment: {
+        title: "Appointment Reminder Agent",
+        image: "images/appointment-reminder-agen.png",
+        description: "Sends appointment reminders and confirmations to reduce no-shows.",
+        benefits: [
+          "SMS reminders",
+          "Email reminders",
+          "Appointment confirmations",
+          "Reduce no-shows"
+        ]
+      },
+      review: {
+        title: "Google Review Growth Agent",
+        image: "images/google-review-agent.png",
+        description: "Automatically requests reviews from happy customers and helps grow your reputation.",
+        benefits: [
+          "Review request automation",
+          "Google review link sharing",
+          "Follow-up messages",
+          "Improve local trust"
+        ]
+      },
+      expense: {
+        title: "Receipt & Expense Agent",
+        image: "images/receipt-expense-agent.png",
+        description: "Organizes receipts, extracts expense data and prepares monthly reports.",
+        benefits: [
+          "Receipt scanning",
+          "Expense categorization",
+          "Google Sheets tracking",
+          "Monthly summaries"
+        ]
+      },
+      job: {
+        title: "Job Application Agent",
+        image: "images/job-application-agent.png",
+        description: "Helps users find jobs, prepare applications and track job search progress.",
+        benefits: [
+          "Job matching",
+          "Resume support",
+          "Cover letter drafts",
+          "Application tracking"
+        ]
+      },
+     social: {
+  title: "Social Media Growth Agent",
+  image: "images/social.png",
+  description: "Automatically creates content ideas, schedules posts, tracks engagement and helps local businesses grow their online presence.",
+
+  benefits: [
+    "Generate Facebook and Instagram posts",
+    "Create captions automatically",
+    "Schedule social media content",
+    "Track followers and engagement",
+    "Suggest best posting times",
+    "Create promotional campaigns",
+    "Generate weekly performance reports",
+    "Help maintain consistent online activity"
+  ]
+},
+      growth: {
+        title: "Local Business Growth Agent",
+        image: "images/local-business-growth-agent.png",
+        description: "Reviews your online presence and identifies missed business opportunities.",
+        benefits: [
+          "Review monitoring",
+          "Lead tracking",
+          "Website checks",
+          "Weekly growth reports"
+        ]
+      }
+    };
+
+    function openAgent(key) {
+      const agent = agents[key];
+
+      document.getElementById("modalImage").src = agent.image;
+      document.getElementById("modalTitle").textContent = agent.title;
+      document.getElementById("modalDescription").textContent = agent.description;
+
+      const benefitsList = document.getElementById("modalBenefits");
+      benefitsList.innerHTML = "";
+
+      agent.benefits.forEach(item => {
+        const li = document.createElement("li");
+        li.textContent = item;
+        benefitsList.appendChild(li);
+      });
+
+      document.getElementById("agentModal").classList.add("show-modal");
+    }
+
+    function closeAgent() {
+      document.getElementById("agentModal").classList.remove("show-modal");
+    }
+
+    window.onclick = function(event) {
+      const modal = document.getElementById("agentModal");
+      if (event.target === modal) {
+        closeAgent();
+      }
+    };
+  </script>
+
+</body>
+</html>
