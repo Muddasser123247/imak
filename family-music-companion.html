@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Family Music Companion — iMak Software Solutions</title>
+  <meta name="description" content="A personalized family music companion that suggests short music activities for bedtime, car rides, rainy days, bonding and everyday play." />
+  <meta name="robots" content="index, follow" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="software-solutions.css" />
+</head>
+<body>
+  <div class="top-bar">Custom Software, AI Automation & Business Platforms</div>
+  <header class="main-header">
+    <div class="container header-inner">
+      <div class="logo"><a href="index.html" class="active">iMak</a></div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="accessories.html">Accessories</a>
+        <a href="services.html">In-Store Services</a>
+        <a href="ai-agents.html">AI Solutions</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="product-hero">
+    <div class="container product-hero-grid">
+      <div>
+        <span class="product-kicker">Family Experiences • Music • Personalization</span>
+        <h1>Family Music Companion</h1>
+        <p class="lead">Turn everyday family moments into simple musical experiences. Parents choose what they need right now and receive a short, age-appropriate music activity they can do together in just a few minutes.</p>
+        <div class="hero-actions">
+          <a href="#moments" class="btn primary-btn">Try the Experience</a>
+          <a href="contact.html" class="btn secondary-btn">Request a Demo</a>
+        </div>
+      </div>
+      <div class="product-hero-image"><img src="images/family-music-companion.svg" alt="Family Music Companion interface" /></div>
+    </div>
+  </section>
+
+  <section class="moment-selector section-alt" id="moments">
+    <div class="container">
+      <div class="solution-heading">
+        <h2>What does your family need?</h2>
+        <p>Choose the moment. The companion recommends a quick music activity that fits the situation.</p>
+      </div>
+      <div class="moment-grid" id="momentGrid">
+        <button class="moment-btn active" data-key="bedtime"><span class="moment-emoji">😴</span><strong>Bedtime</strong></button>
+        <button class="moment-btn" data-key="car"><span class="moment-emoji">🚗</span><strong>Car ride</strong></button>
+        <button class="moment-btn" data-key="rain"><span class="moment-emoji">🌧</span><strong>Rainy day</strong></button>
+        <button class="moment-btn" data-key="fussy"><span class="moment-emoji">😭</span><strong>Fussy moment</strong></button>
+        <button class="moment-btn" data-key="energy"><span class="moment-emoji">⚡</span><strong>Burn some energy</strong></button>
+        <button class="moment-btn" data-key="bonding"><span class="moment-emoji">❤️</span><strong>Parent & baby bonding</strong></button>
+        <button class="moment-btn" data-key="cleanup"><span class="moment-emoji">🧹</span><strong>Clean-up time</strong></button>
+        <button class="moment-btn" data-key="play"><span class="moment-emoji">🎉</span><strong>Just want to play</strong></button>
+      </div>
+
+      <div class="moment-result" aria-live="polite">
+        <div>
+          <div class="eyebrow">Your Music Moment</div>
+          <h3 id="momentTitle">Moonlight Sway • 3 minutes</h3>
+          <p id="momentText">Hold your child close, sway gently, and hum or sing a familiar melody together. Keep the rhythm slow and simple.</p>
+        </div>
+        <div class="moment-play">▶</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="solution-section">
+    <div class="container">
+      <div class="solution-heading">
+        <h2>More than an activity picker</h2>
+        <p>The same platform can build a private musical journey that continues between classes and becomes a keepsake over time.</p>
+      </div>
+      <div class="journey-strip">
+        <div class="journey-card"><div class="journey-icon">🎵</div><h3>Personalized Home Activities</h3><p>Recommend short activities based on the child’s age, enrolled program, familiar songs and the family’s current situation.</p></div>
+        <div class="journey-card"><div class="journey-icon">🪪</div><h3>Musical Passport</h3><p>Record favourite instruments, songs and musical experiences so families can look back on the child’s journey.</p></div>
+        <div class="journey-card"><div class="journey-icon">📖</div><h3>Musical Time Capsule</h3><p>Combine selected photos, short clips, teacher notes and milestones into a private end-of-semester keepsake.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="solution-section section-alt">
+    <div class="container">
+      <div class="solution-heading"><h2>Designed for family programs</h2><p>A branded experience for music schools, toddler programs, dance studios and other child-focused activity providers.</p></div>
+      <div class="feature-grid">
+        <div class="feature-box"><div class="feature-icon">01</div><h3>Weekly Teacher Moment</h3><p>Teachers can quickly highlight a favourite activity or instrument from class.</p></div>
+        <div class="feature-box"><div class="feature-icon">02</div><h3>Situation-Based Activities</h3><p>Parents choose a real-life moment instead of searching through a large lesson library.</p></div>
+        <div class="feature-box"><div class="feature-icon">03</div><h3>Family Memories</h3><p>Parents can optionally save photos, short audio clips or videos alongside the child’s musical journey.</p></div>
+        <div class="feature-box"><div class="feature-icon">04</div><h3>AI Music Companion</h3><p>Use the organization’s own activity library to suggest suitable ideas in natural language.</p></div>
+        <div class="feature-box"><div class="feature-icon">05</div><h3>Program Personalization</h3><p>Activities can reflect the child’s current class, familiar repertoire and available time.</p></div>
+        <div class="feature-box"><div class="feature-icon">06</div><h3>Private Family Experience</h3><p>Keep each child’s journey and family memories private while giving parents something meaningful to revisit.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="solution-section">
+    <div class="container"><div class="cta-box"><h2>Build a branded family companion for your program</h2><p>We can customize the activities, branding, programs, age groups, teacher workflow and AI experience around your organization.</p><a href="contact.html" class="btn primary-btn">Request a Demo</a></div></div>
+  </section>
+
+<script>
+const moments = {
+  bedtime: {title:'Moonlight Sway • 3 minutes', text:'Hold your child close, sway gently, and hum or sing a familiar melody together. Keep the rhythm slow and simple.'},
+  car: {title:'Echo & Clap • 4 minutes', text:'Choose a short rhythm. Clap or tap it once, then invite your child to echo it back. Take turns creating the next pattern.'},
+  rain: {title:'Kitchen Band • 5 minutes', text:'Pick two safe household objects that make different sounds. Explore loud, soft, fast and slow together like a tiny family band.'},
+  fussy: {title:'Rock & Hum • 2 minutes', text:'Keep it simple: hold or sit close, rock steadily, and hum one familiar tune. Repetition matters more than variety.'},
+  energy: {title:'Freeze & Move • 4 minutes', text:'Play a favourite song and move together. Pause the music at random moments and freeze until the beat returns.'},
+  bonding: {title:'Heartbeat Song • 3 minutes', text:'Hold baby close and sing a gentle repeated phrase while softly tapping the beat on your own shoulder or knee.'},
+  cleanup: {title:'Tidy-Up Beat • 5 minutes', text:'Choose a steady beat and turn each clean-up action into part of the rhythm: pick up, tap, drop in, repeat.'},
+  play: {title:'Pick an Instrument • 5 minutes', text:'Choose one instrument or sound-maker and explore three ways to play it: soft, loud, and stop-and-go.'}
+};
+document.querySelectorAll('.moment-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.moment-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const m = moments[btn.dataset.key];
+    document.getElementById('momentTitle').textContent = m.title;
+    document.getElementById('momentText').textContent = m.text;
+  });
+});
+</script>
+</body>
+</html>
