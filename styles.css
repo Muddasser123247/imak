@@ -882,6 +882,7 @@ img {
   border-radius: 1.25rem;
   background: #111827;
   box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+  margin-bottom:30px
 }
 
 .hero-video video {
