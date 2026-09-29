@@ -202,6 +202,163 @@
 }
 
 
+.software-video-section {
+  display: grid;
+  grid-template-columns: 0.9fr 1.4fr;
+  gap: 2rem;
+  align-items: center;
+  margin: 2rem 0 3rem;
+  padding: 1.5rem;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 1.25rem;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+}
+
+.software-video-copy h3 {
+  font-size: 1.65rem;
+  line-height: 1.2;
+  margin: 0.5rem 0 0.8rem;
+}
+
+.software-video-copy p {
+  color: #4b5563;
+  margin-bottom: 1rem;
+  text-align: left !important;
+}
+
+.software-video-copy ul {
+  padding-left: 1.2rem;
+  line-height: 1.8;
+  color: #374151;
+}
+
+.software-video-label {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #2563eb;
+}
+
+.software-video-wrapper {
+  overflow: hidden;
+  border-radius: 1rem;
+  background: #111827;
+}
+
+.software-video-wrapper video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+@media (max-width: 800px) {
+  .software-video-section {
+    grid-template-columns: 1fr;
+  }
+}
+ :root {
+    --brand: #1f5fbf;
+    --brand-soft: #e8f0fc;
+    --ink: #14213d;
+    --muted: #5b6577;
+    --line: #e3e7ee;
+    --bg: #f6f8fb;
+    --card: #ffffff;
+    --tag-bg: #e6f5ec;
+    --tag-ink: #1d6b3f;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: "Inter", system-ui, sans-serif; background: var(--bg); color: var(--ink); }
+ 
+  /* ---------- section ---------- */
+  .client-reviews { padding: 80px 0; }
+ 
+  .reviews-heading { text-align: left; max-width: 620px; margin: 0 0 40px; }
+  .reviews-label { display: inline-block; font-size: 14px; font-weight: 600; color: var(--brand); margin-bottom: 8px; }
+  .reviews-heading h2 { margin: 0 0 12px; font-size: clamp(28px, 4vw, 38px); line-height: 1.2; }
+  .reviews-heading p { margin: 0; color: var(--muted); line-height: 1.7; }
+ 
+  /* ---------- slider ---------- */
+  .review-slider { position: relative; }
+  .review-viewport { overflow: hidden; border-radius: 20px; }
+  .review-track {
+    display: flex;
+    align-items: stretch;
+    transition: transform .6s cubic-bezier(.65, 0, .35, 1);
+    will-change: transform;
+  }
+ 
+  .review-card {
+    flex: 0 0 100%;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    padding: 36px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+ 
+  .review-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  .review-id { display: flex; align-items: center; gap: 14px; min-width: 0; }
+  .review-logo {
+    width: 56px; height: 56px; flex: none;
+    border: 1px solid var(--line); border-radius: 14px; background: #fff;
+    display: flex; align-items: center; justify-content: center; padding: 8px;
+  }
+  .review-logo img { max-width: 100%; max-height: 100%; object-fit: contain; }
+  .review-client strong { display: block; font-size: 16px; }
+  .review-client span { display: block; font-size: 13px; color: var(--muted); margin-top: 2px; }
+ 
+  .review-tag {
+    font-size: 13px; font-weight: 500; padding: 6px 14px; border-radius: 8px;
+    background: var(--tag-bg); color: var(--tag-ink); white-space: nowrap;
+  }
+ 
+  .review-text {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(16px, 2vw, 19px);
+    line-height: 1.75;
+  }
+ 
+  /* ---------- arrows (sides) ---------- */
+  .review-arrow {
+    position: absolute; top: 50%; transform: translateY(-50%); z-index: 2;
+    width: 44px; height: 44px; border-radius: 50%;
+    border: 1px solid var(--line); background: var(--card); color: var(--ink);
+    font-size: 15px; cursor: pointer; transition: background .2s, color .2s, border-color .2s;
+  }
+  .review-prev { left: -22px; }
+  .review-next { right: -22px; }
+  .review-arrow:hover { background: var(--brand); border-color: var(--brand); color: #fff; }
+  .review-arrow:focus-visible, .review-dot:focus-visible { outline: 3px solid var(--brand); outline-offset: 2px; }
+ 
+  /* ---------- dots ---------- */
+  .review-dots { display: flex; justify-content: center; gap: 8px; margin-top: 24px; }
+  .review-dot {
+    width: 9px; height: 9px; padding: 0; border: 0; border-radius: 5px;
+    background: #c9d1de; cursor: pointer; transition: width .3s, background .3s;
+  }
+  .review-dot.active { width: 26px; background: var(--brand); }
+ 
+  /* ---------- mobile ---------- */
+  @media (max-width: 700px) {
+    .client-reviews { padding: 56px 0; }
+    .review-arrow { display: none; }
+    .review-card { padding: 24px 22px; gap: 20px; }
+    .review-tag { order: 3; }
+  }
+ 
+  @media (prefers-reduced-motion: reduce) {
+    .review-track { transition: none; }
+  }
+
 /* Family Music Companion */
 .moment-selector { padding: 3rem 0; }
 .moment-grid { display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:1rem; margin:1.75rem 0; }

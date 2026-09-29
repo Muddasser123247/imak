@@ -99,9 +99,21 @@ img {
 
 .hero-inner {
   display: grid;
-  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
   gap: 2.5rem;
   align-items: center;
+}
+
+.hero-heading {
+  grid-column: 1 / -1;
+}
+
+.hero-heading h1 {
+  font-size: clamp(1.4rem, 3vw, 2.4rem);
+  line-height: 1.1;
+  margin-bottom: 0;
+  max-width: 100%;
+  margin-top:20px
 }
 
 .hero-text h1 {
@@ -860,4 +872,74 @@ img {
   text-align: center;
   color: #475569;
   line-height: 1.7;
+}
+
+.hero-video {
+  width: 100%;
+  max-width: 620px;
+  justify-self: end;
+  overflow: hidden;
+  border-radius: 1.25rem;
+  background: #111827;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+}
+
+.hero-video video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+
+
+
+
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.hero-text > p {
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 100%;
+}
+
+/* Keep bullet text aligned with the paragraph */
+.hero-text ul {
+  margin: 1rem 0 1.4rem;
+  padding-left: 1.25rem;
+  line-height: 1.6;
+  width: 100%;
+}
+
+.hero-text li {
+  padding-left: 0.15rem;
+}
+
+/* Keep both buttons together */
+.hero-text .hero-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  gap: 0.75rem;
+  margin-top: 0;
+  width: 100%;
+}
+
+.hero-text .hero-actions .btn {
+  white-space: nowrap;
+}
+
+/* Align the contact text with everything above */
+.hero-contact-link {
+  margin: 0.7rem 0 0;
+  padding: 0;
+  text-align: left;
 }
