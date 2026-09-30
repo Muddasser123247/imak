@@ -944,3 +944,362 @@ img {
   padding: 0;
   text-align: left;
 }
+
+/* =========================================================
+   FINAL MOBILE RESPONSIVE OVERRIDE
+   Keep this at the VERY BOTTOM of styles.css
+========================================================= */
+
+@media (max-width: 900px) {
+
+  /* ---------- General ---------- */
+
+  .container {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .top-bar {
+    font-size: 0.78rem;
+    line-height: 1.4;
+    padding: 0.55rem 1rem;
+  }
+
+
+  /* ---------- Header / Mobile Navigation ---------- */
+
+  .main-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .header-inner {
+    display: flex;
+    flex-direction: row; /* IMPORTANT: overrides old column rule */
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.75rem 20px;
+    position: relative;
+  }
+
+  .logo {
+    font-size: 1.25rem;
+    flex-shrink: 0;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 42px;
+    padding: 0;
+    border: 0;
+    border-radius: 10px;
+    background: #111827;
+    color: #ffffff;
+    font-size: 1.35rem;
+    cursor: pointer;
+  }
+
+  .nav {
+    display: none;
+    position: absolute;
+    top: calc(100% + 1px);
+    left: 20px;
+    right: 20px;
+    width: auto;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 0.3rem;
+    padding: 0.75rem;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 0 0 14px 14px;
+    box-shadow: 0 15px 35px rgba(15, 23, 42, 0.12);
+    z-index: 999;
+  }
+
+  .nav.show {
+    display: flex;
+  }
+
+  .nav a {
+    display: block;
+    width: 100%;
+    padding: 0.8rem 0.9rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+  }
+
+  .nav a.active,
+  .nav a:hover {
+    background: #111827;
+    color: #ffffff;
+  }
+
+
+  /* ---------- Homepage Hero ---------- */
+
+  .hero {
+    padding: 1.8rem 0 2.4rem;
+  }
+
+  .hero-inner {
+    display: grid;
+    grid-template-columns: 1fr !important;
+    gap: 1.4rem;
+    align-items: stretch;
+  }
+
+  .hero-heading {
+    grid-column: 1;
+    width: 100%;
+  }
+
+  .hero-heading h1,
+  .hero h1 {
+    font-size: clamp(1.85rem, 8vw, 2.35rem);
+    line-height: 1.12;
+    letter-spacing: -0.025em;
+    margin: 0;
+  }
+
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .hero-text p {
+    max-width: none;
+    width: 100%;
+    font-size: 0.98rem;
+    line-height: 1.65;
+  }
+
+  .hero-text ul {
+    width: 100%;
+    margin: 1rem 0 1.25rem;
+    padding-left: 1.25rem;
+    line-height: 1.55;
+  }
+
+  .hero-text li {
+    margin-bottom: 0.4rem;
+    padding-left: 0;
+  }
+
+
+  /* ---------- Hero Buttons ---------- */
+
+  .hero-text .hero-actions,
+  .hero-actions {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    gap: 0.7rem;
+    width: 100%;
+    margin-top: 0.4rem;
+  }
+
+  .hero-text .hero-actions .btn,
+  .hero-actions .btn {
+    width: 100%;
+    min-height: 46px;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .hero-contact-link {
+    margin: 0.85rem 0 0;
+    line-height: 1.5;
+    text-align: left;
+  }
+
+
+  /* ---------- Hero Video ---------- */
+
+  .hero-video {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    justify-self: stretch;
+    border-radius: 16px;
+  }
+
+  .hero-video video {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+
+
+  /* ---------- Sections ---------- */
+
+  .section {
+    padding: 2.3rem 0;
+  }
+
+  .section-title {
+    font-size: 1.65rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+
+  /* ---------- General Grids ---------- */
+
+  .categories-grid,
+  .services-grid,
+  .locations-grid,
+  .contact-grid,
+  .software-home-grid,
+  .feature-grid,
+  .workflow-grid,
+  .footer-inner {
+    grid-template-columns: 1fr !important;
+  }
+
+
+  /* ---------- Cards ---------- */
+
+  .card,
+  .service-card,
+  .category-card,
+  .location-card,
+  .feature-box,
+  .workflow-step {
+    width: 100%;
+  }
+
+
+  /* ---------- Software Product Pages ---------- */
+
+  .software-hero {
+    padding: 2.5rem 0 2.25rem;
+  }
+
+  .software-hero-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.6rem;
+  }
+
+  .software-hero h1 {
+    font-size: clamp(2rem, 9vw, 2.8rem);
+    line-height: 1.08;
+  }
+
+  .software-hero .lead {
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .software-hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .software-hero-actions .btn,
+  .solution-secondary-btn {
+    width: 100%;
+  }
+
+  .solution-callout {
+    grid-template-columns: 1fr !important;
+    padding: 1.5rem;
+  }
+
+  .solution-callout .btn {
+    justify-self: stretch;
+    width: 100%;
+  }
+
+
+  /* ---------- AI Agent Page ---------- */
+
+  .agent-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.2rem;
+  }
+
+  .agent-card img {
+    height: auto;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+  }
+
+
+  /* ---------- Contact Page ---------- */
+
+  .contact-grid {
+    gap: 1.25rem;
+  }
+
+  .contact-form-card,
+  .contact-info-card {
+    width: 100%;
+  }
+
+
+  /* ---------- Footer ---------- */
+
+  .footer-inner {
+    gap: 1.5rem;
+  }
+
+  .footer-bottom-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .map-container iframe {
+    height: 250px;
+  }
+}
+
+
+/* Extra-small phones */
+@media (max-width: 480px) {
+
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .header-inner {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .nav {
+    left: 16px;
+    right: 16px;
+  }
+
+  .hero-heading h1,
+  .hero h1 {
+    font-size: 1.85rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    font-size: 0.92rem;
+    padding: 0.7rem 1rem;
+  }
+}

@@ -36,7 +36,14 @@
   <header class="main-header">
     <div class="container header-inner">
       <div class="logo"><a href="index.html" class="active">iMak</a></div>
-      <nav class="nav">
+      <button
+        class="menu-toggle"
+        aria-label="Open navigation menu"
+        onclick="toggleMenu()"
+      >
+        ☰
+      </button>
+      <nav class="nav" id="mainNav">
         <a href="index.html" class="active">Home</a>
         <a href="accessories.html">Accessories</a>
         <!-- Keep the Services page, but do NOT mention it on the homepage if you want the homepage ad-safe -->
@@ -448,6 +455,10 @@
   });
  
   startAuto();
+
+  function toggleMenu() {
+    document.getElementById("mainNav").classList.toggle("show");
+  }
 </script>
 
 </body>
